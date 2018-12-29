@@ -42,6 +42,7 @@ Notes:
   2. In order to converge it is required to weight the different and similar losses to have the same affect.
   
 Implemented in:
+https://github.com/michaelfiman/face_rec_metric_comparison/blob/master/0_FERET_main_class_distance_loss.ipynb
   
 ### Contrastive loss
 https://www.tensorflow.org/api_docs/python/tf/contrib/losses/metric_learning/contrastive_loss
@@ -54,6 +55,7 @@ Notes:
   2. low margin converged but gave bad results.
 
 Implemented in:
+https://github.com/michaelfiman/face_rec_metric_comparison/blob/master/1_FERET_main_contrastive_loss.ipynb
 
 
 ### npairs loss
@@ -70,6 +72,7 @@ Notes:
   2. During training it seems that the model overfits very quickly and we need to take an early chckpoint for usage in the app.
 
 Implemented in:
+https://github.com/michaelfiman/face_rec_metric_comparison/blob/master/2_FERET_main_npairs_loss.ipynb
 
 ### cluster loss
 https://www.tensorflow.org/api_docs/python/tf/contrib/losses/metric_learning/cluster_loss
