@@ -13,6 +13,7 @@ The other metrics compared are taken from (tf.contrib.losses.metric_learning):
 
 ## Dataset
 The dataset is a downloaded set of ~3500 face images divided into 700 classes.
+
 Note: After finishing the project, it seems the choice of the dataset was not a good one since the amount of data is very small for the amount of classes.
 
 ## Model architecture
