@@ -34,9 +34,9 @@ else: (images are of different people)
   diff_loss += max(0, threshold - L2distance(f(a),f(b))
 
 loss = 0.5 * ((sim_loss/sim_count) + (diff_loss/diff_count))
-
+```
 Where threshold is a hyperparameter setting the margin required between different images, sim_count/diff_count are the amount of examples of each type.
-``` 
+
 Notes:
   1. Attempting to train the model only using this loss or updating all parameters (and not only the one before last FC) doesn't converge.
   2. In order to converge it is required to weight the different and similar losses to have the same affect.
@@ -89,9 +89,10 @@ Accuracy- the amount of correct predictions out of all predictions.
 simm diff ratio- the ability to seperate between same and different pairs:
 ```
 simm_diif_ratio = distance_average_sim/distance_avergage_diff
+```
 where distance_average_sim is the average distance computed for of a set of similar images
 and distance_avergage_diff is the average distance computed for of a set of different images
-```
+
 
 ## Summary and comparison
 As expected, the first two metrics, self created and contrastive, scored more or less the same and had the same affect when running them in the app. This is due to the fact that they are very similar and train to reach the same general objective.
