@@ -65,6 +65,10 @@ These are then used as logits for a softmax classifier problem. We can see that 
 
 This metric is based on the following: http://www.nec-labs.com/uploads/images/Department-Images/MediaAnalytics/papers/nips16_npairmetriclearning.pdf
 
+Notes:
+  1. As in the previos loss, it was required to run a classification objective and only train specific layers to get this loss to converge.
+  2. During training it seems that the model overfits very quickly and we need to take an early chckpoint for usage in the app.
+
 Implemented in:
 
 ### cluster loss
@@ -75,5 +79,20 @@ The implementation is more complex and could be found in: https://arxiv.org/pdf/
 
 Notes:
   1. This model took much longer to train as some of the ops for this metric via tensorflow are not supported by the GPU in use.
+  2. There was no need to pretrain this model on a classification objective, it was able to converge on the cluster objective alone.
+
+## Results
+Accuracy- the amount of correct predictions out of all predictions.
+simm diff ratio- the ability to seperate between same and different pairs:
+```
+simm_diif_ratio = distance_average_sim/distance_avergage_diff
+where distance_average_sim is the average distance computed for of a set of similar images
+and distance_avergage_diff is the average distance computed for of a set of different images
+```
+
+## Summary and comparison
+As expected, the first two metrics, self created and contrastive, scored more or less the same and had the same affect when running them in the app. This is due to the fact that they are very similar and train to reach the same general objective.
+The npairs loss scored a better overall accuracy score with a much better sim to diff ration yet while running it in the app the reults were not so good. I think it might have to do with the ability of the distance method calculated by inner product to cope with inputs which have a lot of variances (like the images captured from the video).
+The cluster loss scored...
 
 
