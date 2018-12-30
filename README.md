@@ -87,6 +87,9 @@ Notes:
 
 ## Results
 Accuracy- the amount of correct predictions out of all predictions.
+```
+accuracy = correct_predictions/(correct_predictions+incorrect_predictions)
+```
 simm diff ratio- the ability to seperate between same and different pairs:
 ```
 simm_diif_ratio = distance_average_sim/distance_avergage_diff
