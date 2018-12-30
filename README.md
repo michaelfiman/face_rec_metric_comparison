@@ -86,7 +86,7 @@ Notes:
   2. There was no need to pretrain this model on a classification objective, it was able to converge on the cluster objective alone.
 
 Implemented in:
-https://github.com/michaelfiman/face_rec_metric_comparison/blob/master/3_FERET_main_cluster_loss_metric.ipynb
+https://github.com/michaelfiman/face_rec_metric_comparison/blob/master/3_FERET_main_clustering_loss_metric.ipynb
 
 ## Results
 Accuracy- the amount of correct predictions out of all predictions.
